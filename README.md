@@ -1,7 +1,7 @@
 ember-markdown-html
 ==============================================================================
 
-[Short description of the addon.]
+Convert static Markdown files to HTML using Showdown at build time.
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,12 +10,24 @@ Installation
 ember install ember-markdown-html
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Currently this addon is hardcoded to look for Markdown files in a `markdown` folder at the project's root.
 
+You can render the HTML by calling the provided helper:
+
+```hbs
+{{! Example: './markdown/my_markdown_file.md' }}
+{{render-markdown "my_markdown_file"}}
+```
+
+Otherwise you will have access to the JSON object by importing the output file:
+
+```js
+import markdown from 'ember-markdown-html/markdown-html';
+// => { [file_name]: 'html', ... }
+```
 
 Contributing
 ------------------------------------------------------------------------------
