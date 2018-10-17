@@ -6,7 +6,6 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Helper | render-markdown', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
     this.set('path', 'test');
     await render(hbs`{{render-markdown path}}`);
@@ -19,5 +18,13 @@ module('Integration | Helper | render-markdown', function(hooks) {
 
     assert.dom('blockquote').exists();
     assert.dom('blockquote').hasText('Hello World');
+  });
+
+  test('it supports nested files', async function(assert) {
+    this.set('path', 'nested.again.hello');
+    await render(hbs`{{render-markdown path}}`);
+
+    assert.dom('h1').exists();
+    assert.dom('h1').hasText('I\'m Nested');
   });
 });
