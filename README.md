@@ -1,6 +1,12 @@
 ember-markdown-html
 ==============================================================================
 
+[![Travis (.org)](https://img.shields.io/travis/com/trmcnvn/ember-markdown-html.svg)](https://travis-ci.com/trmcnvn/ember-markdown-html)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-markdown-html.svg)](https://emberobserver.com/addons/ember-markdown-html)
+[![npm](https://img.shields.io/npm/v/ember-markdown-html.svg)](https://www.npmjs.com/package/ember-markdown-html)
+
+
+
 Convert static Markdown files to HTML using Showdown at build time.
 
 Installation
